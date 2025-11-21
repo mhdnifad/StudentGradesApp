@@ -1,0 +1,13 @@
+@model StudentGrades.Models.Subject
+@{
+    Layout = "_Layout";
+}
+
+<h2>Delete Subject</h2>
+<p>Are you sure you want to delete subject <strong>@Model.SubjectName</strong>?</p>
+
+<form method="post">
+    <input type="hidden" asp-for="SubjectKey" />
+    <button class="btn btn-danger">Delete</button>
+    <a class="btn btn-secondary" href="/Subjects">Cancel</a>
+</form>

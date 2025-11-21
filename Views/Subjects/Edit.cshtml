@@ -1,0 +1,27 @@
+@model StudentGrades.Models.Subject
+@{
+    Layout = "_Layout";
+    var isEdit = Model.SubjectKey != 0;
+}
+
+<h2>@(isEdit ? "Edit Subject" : "Add Subject")</h2>
+
+<form method="post">
+    @if(isEdit)
+    {
+        <input type="hidden" asp-for="SubjectKey" />
+    }
+
+    <div class="mb-3">
+        <label class="form-label">Subject Name</label>
+        <input asp-for="SubjectName" class="form-control" />
+        <span asp-validation-for="SubjectName" class="text-danger"></span>
+    </div>
+
+    <button class="btn btn-primary">Save</button>
+    <a class="btn btn-secondary" href="/Subjects">Back</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

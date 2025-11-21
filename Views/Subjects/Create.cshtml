@@ -1,0 +1,13 @@
+@model StudentGrades.Models.Subject
+@{
+    Layout = "_Layout";
+}
+<h2>Add Subject</h2>
+<form method="post">
+  <div class="mb-3">
+    <label class="form-label">Subject Name</label>
+    <input asp-for="SubjectName" class="form-control" />
+  </div>
+  <button class="btn btn-primary">Save</button>
+  <a class="btn btn-secondary" href="/Subjects">Back</a>
+</form>

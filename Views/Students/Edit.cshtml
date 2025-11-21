@@ -1,0 +1,42 @@
+@model StudentGrades.Models.Student
+@{
+    Layout = "_Layout";
+}
+
+<h2>Edit Student</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="StudentKey" />
+
+    <div class="mb-3">
+        <label class="form-label">Student Name</label>
+        <input asp-for="StudentName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Subject</label>
+        <select asp-for="SubjectKey" class="form-select" asp-items="ViewBag.SubjectList">
+            <option value="">-- Select --</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Grade</label>
+        <input asp-for="Grade" class="form-control" type="number" min="0" max="100" id="GradeInput" value="@Model.Grade" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Remarks (auto)</label>
+        <input id="Remarks" class="form-control" value="@(Model.Grade >= 75 ? "PASS" : "FAIL")" readonly />
+    </div>
+
+    <button class="btn btn-primary">Save</button>
+    <a class="btn btn-secondary" asp-controller="Students" asp-action="Index">Back</a>
+</form>
+
+<script>
+document.getElementById('GradeInput').addEventListener('input', function(){
+    var v = parseInt(this.value) || 0;
+    document.getElementById('Remarks').value = v >= 75 ? 'PASS' : 'FAIL';
+});
+</script>

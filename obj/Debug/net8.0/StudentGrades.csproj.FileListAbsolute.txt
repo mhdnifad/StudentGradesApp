@@ -1,0 +1,9 @@
+C:\Users\nifad\StudentGradesProject\obj\Debug\net8.0\StudentGrades.csproj.AssemblyReference.cache
+C:\Users\nifad\StudentGradesProject\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\nifad\StudentGradesProject\obj\Debug\net8.0\StudentGrades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nifad\StudentGradesProject\obj\Debug\net8.0\StudentGrades.AssemblyInfoInputs.cache
+C:\Users\nifad\StudentGradesProject\obj\Debug\net8.0\StudentGrades.AssemblyInfo.cs
+C:\Users\nifad\StudentGradesProject\obj\Debug\net8.0\StudentGrades.csproj.CoreCompileInputs.cache
+C:\Users\nifad\StudentGradesProject\obj\Debug\net8.0\StudentGrades.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\nifad\StudentGradesProject\obj\Debug\net8.0\StudentGrades.RazorAssemblyInfo.cache
+C:\Users\nifad\StudentGradesProject\obj\Debug\net8.0\StudentGrades.RazorAssemblyInfo.cs

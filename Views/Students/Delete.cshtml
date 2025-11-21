@@ -1,0 +1,13 @@
+@model StudentGrades.Models.Student
+@{
+    Layout = "_Layout";
+}
+<h2>Delete Student</h2>
+<div class="mb-3">
+  <strong>@Model.StudentName</strong> - @Model.Subject?.SubjectName - Grade: @Model.Grade - Remarks: @(Model.Grade>=75? "PASS":"FAIL")
+</div>
+<form method="post" asp-action="Delete">
+  <input type="hidden" name="id" value="@Model.StudentKey" />
+  <button class="btn btn-danger">Delete</button>
+  <a class="btn btn-secondary" href="/Students">Cancel</a>
+</form>
